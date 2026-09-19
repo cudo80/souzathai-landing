@@ -106,6 +106,8 @@
     .nav-links a:hover{color:var(--violet)}
     .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px}
     .hamburger span{display:block;width:26px;height:3px;background:var(--violet-dark);border-radius:3px;margin:5px 0}
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .wa-mini{display:none;width:42px;height:42px;border-radius:50%;background:var(--wa);align-items:center;justify-content:center;text-decoration:none;font-size:1.15rem;box-shadow:0 6px 16px rgba(37,211,102,.35)}
     /* ---------- Botões ---------- */
     .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .25s,box-shadow .25s;border:0;cursor:pointer}
     .btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.35)}
@@ -139,7 +141,7 @@
     /* ---------- Sobre ---------- */
     .sobre-grid{display:grid;grid-template-columns:340px 1fr;gap:54px;align-items:center}
     .photo-placeholder{width:300px;height:300px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--pink));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-size:4.8rem;margin:0 auto;box-shadow:0 18px 45px rgba(124,58,237,.30)}
-    .sobre-text h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--violet-deep);margin-bottom:14px}
+    .sobre-text h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--violet-deep);margin-bottom:14px}
     .sobre-quote{background:#fff;border-left:4px solid var(--pink);border-radius:0 14px 14px 0;padding:18px 22px;margin:22px 0;box-shadow:0 8px 22px rgba(109,40,217,.08);font-style:italic;color:#5d4a75}
     .sobre-creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
     .sobre-creds span{background:#f5ecfb;color:#6d28d9;padding:7px 16px;border-radius:999px;font-size:.86rem;font-weight:500}
@@ -214,6 +216,7 @@
       .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:22px;gap:18px;box-shadow:0 14px 30px rgba(46,16,101,.14)}
       .nav-links.open{display:flex}
       .hamburger{display:block}
+      .wa-mini{display:inline-flex}
       .hero{padding:80px 0 70px}
       section{padding:60px 0}
     }
@@ -225,9 +228,12 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#top">Souza<span>Thai</span> 🌸</a>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <a class="wa-mini" href="https://wa.me/5548996041664?text=Olá!%20Vim%20pelo%20site%20da%20SouzaThai%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <nav aria-label="Navegação principal">
         <ul class="nav-links" id="menu">
           <li><a href="#sobre">Sobre</a></li>
@@ -273,8 +279,7 @@
         <div class="photo-placeholder" role="img" aria-label="Espaço reservado para a foto de Leandro Souza">LS</div>
       </div>
       <div class="sobre-text">
-        <h2 class="visually-hidden" style="position:absolute;left:-9999px">Sobre Leandro Souza</h2>
-        <h3>Leandro Souza — o dom de cuidar</h3>
+        <h2>Leandro Souza — o dom de cuidar</h2>
         <p>Sou <strong>esteticista, massoterapeuta e cuidador de idosos, crianças e pessoas com deficiência (PcD)</strong>. Há mais de <strong>15 anos</strong>, trabalho cuidando de pessoas — fisicamente e psicologicamente — com paciência, empatia e amor.</p>
         <div class="sobre-quote">“Considero ter como dom ou talento o gostar de cuidar das pessoas, física e psicologicamente, com paciência, empatia e amor.” — Leandro Souza</div>
         <p>Além dos atendimentos, sou <strong>instrutor de cursos</strong> e compartilho conhecimento em workshops e palestras, sempre buscando aprender mais e construir parcerias com profissionais, instituições e empresas de diversas áreas.</p>
