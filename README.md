@@ -2,7 +2,7 @@
 
 Landing page de **Leandro Souza (SouzaThai)**: massoterapia, cuidador de idosos, crianças e PcD, cursos e palestras — atendimento a domicílio na Grande Florianópolis (Florianópolis, São José, Palhoça e Biguaçu).
 
-**Contato:** WhatsApp (48) 99604-1664 · [Instagram @erechimsouza](https://www.instagram.com/erechimsouza/) · Therapeutasc@hotmail.com
+**Contato:** WhatsApp (48) 99604-1664 · [Instagram @erechimsouza](https://www.instagram.com/erechimsouza/) · terapeutasc@hotmail.com
 
 ## 🌐 Site no ar
 Após ativar o GitHub Pages, a página fica em:
@@ -21,7 +21,7 @@ Abra o `index.html` em qualquer editor de texto e procure por:
 | O que trocar | Onde procurar |
 |---|---|
 | Fotos por imagens reais | comentários `<!-- PLACEHOLDER: ... -->` |
-| Depoimentos reais | seção Depoimentos (cards marcados) |
+| Avaliações de clientes | seção `#depoimentos`; transcrição em `assets/data/avaliacoes.json` |
 | Textos dos serviços | seções dos 3 pilares |
 
 ## 🚀 Publicar no Netlify (alternativa)
@@ -31,3 +31,16 @@ Acesse [app.netlify.com/drop](https://app.netlify.com/drop) e arraste a pasta in
 1. Cadastrar em [Google Search Console](https://search.google.com/search-console) e enviar o sitemap
 2. Criar **Google Meu Negócio** (perfil de serviço móvel — por área de atendimento)
 3. Adicionar o link do site na **bio do Instagram**
+
+## Avaliações de clientes
+
+A seção **Recomendações de clientes** contém 36 avaliações únicas transcritas das 17 capturas da Cronoshare anexadas pelo usuário, substituindo os três depoimentos de exemplo. Os cards são HTML estático e não dependem de JavaScript para aparecer.
+
+- Transcrição e rastreabilidade: `assets/data/avaliacoes.json`, com nome, data, nota original de 0 a 10, comentário e imagens de origem.
+- A grafia dos comentários foi preservada, normalizando apenas quebras de linha. Aparições repetidas foram reunidas.
+- Myriam e Dione não apresentam comentário nas capturas; os cards indicam isso sem inventar relatos.
+- Valdecir Roberto tem nota **9/10** (4,5 estrelas) e Sonia Mara Da Silva **5/10** (2,5 estrelas); as demais notas são **10/10**.
+- O link Cronoshare de cada card abre o site oficial https://www.cronoshare.com.br/ em nova aba. As capturas de origem ficam registradas em `assets/data/avaliacoes.json`; os arquivos originais não foram alterados.
+- O cabeçalho da plataforma mostra média 9,8 e 36 avaliações. Esses valores não foram usados como média calculada dos comentários transcritos nem adicionados ao JSON-LD.
+
+Ao corrigir uma transcrição, atualize o JSON e o card correspondente no `index.html`, conferindo a imagem de origem. Referências de marcação: [HTML Standard: blockquote](https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element) e [time](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element).
